@@ -1,0 +1,221 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif,Tahoma, Arial;
+    background-color: rgba(200,200,200,.1);
+}
+
+.content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    box-shadow: .1em .1em .3em rgba(50,50,50,.3);
+}
+
+.content::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+#map{
+    width: 50%;
+    height: 400px;
+    margin: 0 auto;
+    text-shadow: 0 .05em 0 white;
+}
+
+.resultTable{
+    width: 20%;
+    font-size: 16pt;
+    color: rgba(100,100,100,0.8);
+    text-shadow: 0 .05em 0 white;
+}
+
+h1{
+    font-size: inherit;
+}
+
+.resultTable>div{
+    min-height: 200px;
+    background-color: rgba(200,200,200,.3);
+}
+
+.numberList{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 25%;
+    border-radius: 1.5em 0 0 1.5em;
+    padding-right: .2em;
+    text-align: right;
+    border: 0.03em solid rgba(100,100,100,.4);
+    border-right: none;
+}
+
+
+.citiesList{
+    float: right;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 75%;
+    padding-left: .5em;
+    border-radius: 0 1.5em 1.5em 0;
+    border: 0.03em solid rgba(100,100,100,.4);
+}
+
+.header{
+
+    box-shadow: 0 0.2em 0.2em rgba(50,50,50,.3);
+    width: 100%;
+    min-height: 65px;
+}
+
+.headerContent {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 65px;
+}
+
+form{
+    margin: auto;
+    grid-column: 2;
+}
+
+
+form>input{
+    box-sizing: border-box;
+    width: 70%;
+}
+
+form>button.input{
+    float:right;
+    width: 30%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+form>button.input>img {
+    width: 1rem;
+}
+
+form>input[type="text"]{
+    cursor: text;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+}
+
+form>input[type="text"]:focus{
+    outline: none;
+    border: 0.03em solid rgba(100,100,100,.4);
+    box-shadow: inset 0 0 5px rgba(0,0,0,.35);
+}
+
+.buttons{
+    grid-column: 3;
+    margin: auto;
+    margin-right: 0;
+
+}
+
+.input{
+    outline: none;
+    cursor: pointer;
+    padding: .3em .8em;
+    font-size: 18pt;
+    color: rgba(100,100,100,0.8);
+    background-color: rgba(200,200,200,.3);
+    border-radius: .45em;
+    text-shadow: 0 .05em 0 white;
+    border: 0.03em solid rgba(100,100,100,.2);
+}
+
+.input:active{
+    border: 0.03em solid rgba(100,100,100,.4);
+    box-shadow: inset 0 0 5px rgba(0,0,0,.35);
+}
+
+.input:hover{
+    border: 0.03em solid rgba(100,100,100,.4);
+}
+
+.overflow-string {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.errorMessage{
+    position: absolute;
+    font-size: 16pt;
+    color: rgba(100, 30, 0, .9);
+    background-color: rgb(250, 116, 75);
+    min-width: 150px;
+    padding: .4em 1em;
+    border-radius: 1em;
+}
+
+.gameStat{
+    max-width: 1200px;
+    margin: 0 auto;
+
+    box-shadow: .1em .1em .3em rgba(50,50,50,.3);
+    font-size: 16pt;
+    color: rgba(100,100,100,0.8);
+    text-shadow: 0 .05em 0 white;
+}
+
+.statTable{
+    padding: 15px;
+    border-bottom: 0.03em solid rgba(100,100,100,.4);
+}
+
+
+.whiteScreen{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 9;
+    background-color: white;
+}
+
+.loader {
+    position: absolute;
+    top: calc(50% - 10vh);
+    left: calc(50% - 10vh);
+    width: 20vh;
+    height: 20vh;
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.working{
+    background-color: rgba(150,150,150,0.5);
+    box-shadow: inset 0 0 5px rgba(100,100,250,0.5);
+}
+
+.disabled{
+    background-color: rgba(150,150,150,0.7);
+    text-shadow: none;
+}
+
+
+
+

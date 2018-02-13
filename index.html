@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cities</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+</head>
+<body>
+
+
+
+<div class="loader"></div>
+<div class="whiteScreen">
+</div>
+
+<div class="header">
+    <div class="headerContent">
+            <form autocomplete="off" action="#" onsubmit="event.preventDefault()">
+                <input class="input" type="text" name="fname" placeholder="Имя города">
+                <button type="button" class="input"><img src="icons/microphone.svg">
+                </button>
+            </form>
+
+    <div class="buttons">
+        <button class="input">Restart</button>
+        <button class="input">End the game</button>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="content">
+
+    <div class="resultTable" style="float: left">
+        <h1>Player:</h1>
+        <div class="numberList"></div>
+        <div class="citiesList"></div>
+    </div>
+
+    <div class="resultTable" style="float: right">
+        <h1>Computer:</h1>
+        <div class="numberList"></div>
+        <div class="citiesList"></div>
+    </div>
+
+    <div id="map"></div>
+
+</div>
+
+<script src="js/functionDeclarations.js"></script>
+<script src="js/cities.js"></script>
+</body>
+</html>
